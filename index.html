@@ -3,233 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QUIZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
-        * {
+        *{
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-          }
-          body {
-            background-color: #f4c531;
-          }
-          .container {
-            background-color: #ffffff;
-            font-size: 16px;
-            padding: 3em 2.8em;
-            width: 90vw;
-            max-width: 32em;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            left: 50%;
-            top: 50%;
-            border-radius: 0.6em;
-          }
-          .search-container {
+            font-family:  sans-serif;
+        }
+        body{
+            background-color: #020024;
+                font-family: "Roboto", sans-serif;
+        }
+        .main{
             width: 100%;
-            display: grid;
-            grid-template-columns: 9fr 3fr;
-            gap: 1.2em;
-          }
-          .search-container input {
-            font-size: 1em;
-            padding: 0.6em;
-            border: none;
-            outline: none;
-            border-bottom: 2px solid #202030;
-          }
-          .search-container button {
-            font-size: 1em;
-            background-color: #f4c531;
-            border: none;
-            font-weight: 600;
-            border-radius: 0.3em;
-          }
-          img {
-            display: block;
-            width: 50%;
-            margin: 1.8em auto 0 auto;
-          }
-          .details {
-            background-color: #f4c531;
-            position: relative;
-            margin: -4.3em 0 0 0;
-            text-align: center;
-            padding: 0.6em 0;
-          }
-          .details h2 {
-            font-size: 1.2em;
-            font-weight: 600;
-          }
-          .details h4 {
-            font-size: 1em;
-            font-weight: 400;
-          }
-          #show-recipe {
-            font-size: 1em;
-            position: relative;
-            left: 75%;
-            padding: 0.9em 0.6em;
-            background-color: #f4c531;
-            border: none;
-            top: 1.5em;
-            border-radius: 0.3em;
-            font-weight: 600;
-          }
-          #recipe {
-            position: absolute;
-            background-color: #ffffff;
-            min-height: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box{
+            height: 400px;
+            width: 40%;
+            box-shadow: 0px 0px 5px grey;
+            color: #020024;
+            background-color: rgb(255, 255, 255);
+            padding: 4rem 2rem;
+            border-radius: 1rem;
+        }
+        .row{
             width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 2;
-            border-radius: 0.6em;
-            display: none;
-          }
-          #recipe pre {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            padding: 2.5em 1.2em 1.2em 1.2em;
-            font-size: 0.92em;
-            color: #303040;
-          }
-          #hide-recipe {
-            font-size: 1em;
-            position: relative;
-            width: 1.8em;
-            height: 1.8em;
-            background-color: #f4c531;
-            border: none;
-            top: 1.2em;
-            left: 90%;
-            border-radius: 0.3em;
-          }
-          ul {
-            font-size: 1em;
-            position: relative;
-            display: grid;
-            grid-template-columns: auto auto;
-            gap: 0.8em 1.1em;
-            padding: 1.2em 0 0 1.2em;
-            color: #303040;
-            text-transform: capitalize;
-          }
-          h3 {
-            text-align: center;
-            margin-top: 1.8em;
-            color: #202030;
-          }
-          @media screen and (max-width: 500px) {
-            .container {
-              font-size: 14px;
-            }
-          }
+            margin: 1rem;
+            margin-left: 2rem;
+        }
+        .row .options{
+            margin-right: 0.6rem;
+        }
+        .row label{
+            font-size: 18px;
+            letter-spacing: 0.5px;
+        }
+        .quebox{
+            letter-spacing: 0.1px;
+        }
+        .btn{
+            height: 3rem;
+            width: 100%;
+            border-radius: 2rem;
+            background-color: #020024;
+            color: white;
+            font-size: 19px;
+            cursor: pointer;
+        }
+        .row:hover{
+            color: #020024;
+            font-weight: 700;
+        }
+        .mark{
+            font-size: 17px;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe App</title>
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="search-container">
-        <input
-          type="text"
-          placeholder="Type A Dish Name Here.."
-          id="user-inp"
-        />
-        <button id="search-btn">Search</button>
-      </div>
-      <div id="result"></div>
+    <div class="main">
+        <div id="box">
+            <marquee class="mark" behavior="" direction="right" loop="1">WELCOME</marquee>
+            <h3 class="quebox">1) This is the dummy question</h3>
+            <div class="row">
+                <input class="options"  type="radio" value="a" id="option1" name="df">
+                <label for="option1"> option 1</label >
+            </div>
+            <div class="row">
+                <input class="options"  type="radio" value="b" id="option2" name="df">
+                <label for="option2"> option 2</label>
+            </div>
+            <div class="row">
+                <input class="options"  type="radio" value="c" id="option3" name="df">
+                <label for="option3"> option 3</label>
+            </div>
+            <div class="row">
+                <input class="options" type="radio" value="d" id="option4" name="df">
+                <label for="option4"> option 4</label>
+            </div>
+            <button class="btn" onclick="submitquiz()">submit</button>
+        </div>
     </div>
-    <!-- Script -->
-    <script src="script.js"></script>
-  </body>
-  <script>
-    //Initial References
-let result = document.getElementById("result");
-let searchBtn = document.getElementById("search-btn");
-let url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
-searchBtn.addEventListener("click", () => {
-  let userInp = document.getElementById("user-inp").value;
-  if (userInp.length == 0) {
-    result.innerHTML = `<h3>Input Field Cannot Be Empty</h3>`;
-  } else {
-    fetch(url + userInp)
-      .then((response) => response.json())
-      .then((data) => {
-        let myMeal = data.meals[0];
-        console.log(myMeal);
-        console.log(myMeal.strMealThumb);
-        console.log(myMeal.strMeal);
-        console.log(myMeal.strArea);
-        console.log(myMeal.strInstructions);
-        let count = 1;
-        let ingredients = [];
-        for (let i in myMeal) {
-          let ingredient = "";
-          let measure = "";
-          if (i.startsWith("strIngredient") && myMeal[i]) {
-            ingredient = myMeal[i];
-            measure = myMeal[`strMeasure` + count];
-            count += 1;
-            ingredients.push(`${measure} ${ingredient}`);
-          }
+
+    <script>
+        const questions=[
+        {
+            'que':' HTML stands for __________',
+            'a':'HyperText Markup Language',
+            'b':'HyperText Machine Language',
+            'c':'HyperText Marking Language',
+            'd':'HighText Marking Language',
+            'correct':'a'
+        },
+        {
+            'que':' What is the correct syntax of doctype in HTML5?',
+            'a':'</doctype html>',
+            'b':'<doctype html>',
+            'c':'<doctype html!>',
+            'd':'<!doctype html>',
+            'correct':'d'
+        },
+        {
+            'que':'  Which of the following is used to read an HTML page and render it?',
+            'a':'Web server',
+            'b':'Web network',
+            'c':'Web browser',
+            'd':'Web matrix',
+            'correct':'c'
+        },
+        {
+            'que':'  What is DOM in HTML?',
+            'a':'Language dependent application programming',
+            'b':'Hierarchy of objects in ASP.NET',
+            'c':'Application programming interface',
+            'd':'Convention for representing and interacting with objects in html documents',
+            'correct':'d'
+        },
+        {
+            'que':'  How do we write comments in HTML?',
+            'a':'</…….>',
+            'b':' <!……>',
+            'c':' </……/>',
+            'd':'<…….!>',
+            'correct':'b'
         }
-        console.log(ingredients);
 
-        result.innerHTML = `
-    <img src=${myMeal.strMealThumb}>
-    <div class="details">
-        <h2>${myMeal.strMeal}</h2>
-        <h4>${myMeal.strArea}</h4>
-    </div>
-    <div id="ingredient-con"></div>
-    <div id="recipe">
-        <button id="hide-recipe">X</button>
-        <pre id="instructions">${myMeal.strInstructions}</pre>
-    </div>
-    <button id="show-recipe">View Recipe</button>
-    `;
-        let ingredientCon = document.getElementById("ingredient-con");
-        let parent = document.createElement("ul");
-        let recipe = document.getElementById("recipe");
-        let hideRecipe = document.getElementById("hide-recipe");
-        let showRecipe = document.getElementById("show-recipe");
+        ]
+    let index=0;
+    let total=questions.length;
+    let right=0;
+    let wrong=0;
 
-        ingredients.forEach((i) => {
-          let child = document.createElement("li");
-          child.innerText = i;
-          parent.appendChild(child);
-          ingredientCon.appendChild(parent);
-        });
+    const quebox=document.querySelector('.quebox');
+    const optioninput=document.querySelectorAll('.options');
+    const loadques=()=>{
+        if(index===total){
+            return end();
+        }
+        reset();
+        const data=questions[index]
 
-        hideRecipe.addEventListener("click", () => {
-          recipe.style.display = "none";
-        });
-        showRecipe.addEventListener("click", () => {
-          recipe.style.display = "block";
-        });
-      })
-      .catch(() => {
-        result.innerHTML = `<h3>Invalid Input</h3>`;
-      });
-  }
-});
-  </script>
-</html>
+        quebox.innerText=`${index+1 })${data.que}`
+        optioninput[0].nextElementSibling.innerText=data.a;
+        optioninput[1].nextElementSibling.innerText=data.b;
+        optioninput[2].nextElementSibling.innerText=data.c;
+        optioninput[3].nextElementSibling.innerText=data.d;
+    }
+    const reset=()=>{
+        optioninput.forEach((inp)=>{
+            inp.checked=false;
+        })
+    }
+    loadques();
+    const submitquiz=()=>{
+        const data=questions[index];
+        const ans=getanswer()
+        if(ans==data.correct){
+            right++;
+        }
+        else{
+            wrong++;
+        }
+        index++;
+        loadques();
+    }
+    const getanswer=()=>{
+        let answer;
+        optioninput.forEach((input)=>{
+            if(input.checked){
+                answer= input.value;
+            }
+        })
+        return answer;
+    }
+    const end=()=>{
+        document.getElementById("box").innerHTML=
+        `<h3> thankyou for playing the quiz</h3>
+        <h2>${right}/${total} are correct</h2>`
+    }
+    </script>
 </body>
 </html>
